@@ -1,0 +1,18 @@
+﻿<Properties StartupItem="iOS/TranslationGame.iOS.csproj" RefactoringSettings.EnableRefactorings="True">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.dfc8bad9" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="TranslationGame/Managers/GameManager.cs">
+    <Files>
+      <File FileName="TranslationGame/ViewModels/PlayPageViewModel.cs" Line="1" Column="1" />
+      <File FileName="TranslationGame/Managers/GameManager.cs" Line="72" Column="38" />
+      <File FileName="TranslationGame/App.cs" Line="1" Column="1" />
+      <File FileName="iOS/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="TranslationGame/Services/TranslateService.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../ArcTouch/git/seiren/seiren/Apps/Seiren.Client/Seiren.Client.Android/Services/SeirenIntentService.cs" line="57" offsetX="551" offsetY="840" expression="extras" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+</Properties>

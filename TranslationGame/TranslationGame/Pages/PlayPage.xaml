@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="TranslationGame.PlayPage">
+	<ContentPage.Content>
+
+	<StackLayout
+		Padding="20, 40"
+		Spacing="50">
+
+		<StackLayout
+			Orientation="Horizontal"
+			HorizontalOptions="CenterAndExpand">
+
+			<Entry
+				Placeholder="Word"
+				HorizontalTextAlignment="Center"
+				WidthRequest="200"
+				IsVisible="{Binding IsOnHold}"
+				Text="{Binding Word}" />
+
+			<Button 
+				Text="Add Word"
+				FontSize="20"
+				BackgroundColor="Silver"
+				WidthRequest="300"
+				IsVisible="{Binding IsOnHold}"
+				Command="{Binding AddWordCommand}" />
+
+		</StackLayout>
+
+		<StackLayout
+			Orientation="Horizontal"
+			HorizontalOptions="CenterAndExpand">
+
+			<Entry
+				Placeholder="Language"
+				HorizontalTextAlignment="Center"
+				WidthRequest="200"
+				IsVisible="{Binding IsOnHold}"
+				Text="{Binding Language}" />
+
+			<Button 
+				Text="Play"
+				FontSize="20"
+				BackgroundColor="Silver"
+				WidthRequest="300"
+				IsVisible="{Binding IsOnHold}"
+				Command="{Binding PlayCommand}" />
+
+			<Button 
+				Text="Stop"
+				FontSize="20"
+				BackgroundColor="Silver"
+				WidthRequest="300"
+				IsVisible="{Binding IsPlaying}"
+				Command="{Binding StopCommand}" />
+
+		</StackLayout>
+
+		<AbsoluteLayout>
+
+			<StackLayout
+				IsVisible="{Binding IsPlaying}"
+				BackgroundColor="Silver"
+				HorizontalOptions="FillAndExpand"
+				Padding="30"
+				AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+				AbsoluteLayout.LayoutFlags="All">
+
+				<Label
+					Text="{Binding CurrentWord}"
+					FontSize="40"
+					HorizontalTextAlignment="Center" />
+
+				<Label
+					Text="What does it mean?"
+					FontSize="30"
+					HorizontalTextAlignment="Center" />
+
+				<StackLayout
+					HorizontalOptions="FillAndExpand"
+					Spacing="30"
+					Padding="50">
+
+					<Button 
+						Text="{Binding Word1}"
+						FontSize="20"
+						BackgroundColor="White"
+						HorizontalOptions="FillAndExpand"
+						BorderRadius="0"
+						Command="{Binding AnswerWord1Command}" />
+
+					<Button 
+						Text="{Binding Word2}"
+						FontSize="20"
+						BackgroundColor="White"
+						HorizontalOptions="FillAndExpand"
+						BorderRadius="0"
+						Command="{Binding AnswerWord2Command}" />
+
+					<Button 
+						Text="{Binding Word3}"
+						FontSize="20"
+						BackgroundColor="White"
+						HorizontalOptions="FillAndExpand"
+						BorderRadius="0"
+						Command="{Binding AnswerWord3Command}" />
+
+					<Label
+						Text="{Binding ScoreText}"
+						FontSize="30"
+						HorizontalTextAlignment="Center" />
+
+				</StackLayout>
+
+			</StackLayout>
+
+			<ActivityIndicator
+				BackgroundColor="White"
+				Opacity="0.5"
+				IsVisible="{Binding IsLoading}"
+				IsRunning="{Binding IsLoading}"
+				AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+				AbsoluteLayout.LayoutFlags="All">
+
+			</ActivityIndicator>
+
+		</AbsoluteLayout>
+
+	</StackLayout>
+
+	</ContentPage.Content>
+</ContentPage>
